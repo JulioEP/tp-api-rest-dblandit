@@ -9,7 +9,6 @@ var logger = require('morgan');
 
 //Definicion de routers
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var cursosRouter = require('./routes/cursos');
 
 var app = express();
@@ -26,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Carga de rutas
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/cursos', cursosRouter);
 
 console.log("APP.JS")
