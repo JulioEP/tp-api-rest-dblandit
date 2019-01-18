@@ -2,4 +2,20 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+  h3 Crear Curso
+  p -POST localhost:3000/cursos  (pasar documento JSON en el body)
+  h3 Eliminar curso
+  p -DELETE localhost:3000/cursos/:id
+  h3 Listar cursos
+  p -GET localhost:3000/cursos
+  p -GET localhost:3000/cursos?duracionHorasTotal=40
+  p -GET localhost:3000/cursos?anioDictado=2019
+  p -GET localhost:3000/cursos?anioDictado=2019&duracionHorasTotal=40
+  h3 Obtener alumnos de un curso
+  p -GET localhost:3000/cursos/:id/alumnos
+  h3 Obtener alumno con mejor nota de un curso
+  p -GET localhost:3000/cursos/:id/alumnos?mejor=true
+
+  h4 JSON de ejemplo
+  p {"anioDictado":2019, "duracionHorasTotal":40, "tema":"big data", "alumnos":[{"nombre":"Julio", "apellido":"Peralta", "dni":12345678, "direccion":"mi casa", "nota":8},{"nombre":"Juan", "apellido":"Funes", "dni":12345668, "direccion":"casa juan", "nota":7},{"nombre":"pepe", "apellido":"olmo", "dni":12545678, "direccion":"casapepe", "nota":10},{"nombre":"Maria", "apellido":"Luisa", "dni":12345679, "direccion":"casamaria", "nota":5}]}

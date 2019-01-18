@@ -3,6 +3,7 @@
 const mongoose =  require('mongoose');
 
 const AlumnoSchema = new mongoose.Schema({
+    _id : false,
     nombre: { type:String, trim:true },
     apellido: { type:String, trim:true },
     dni: Number,
