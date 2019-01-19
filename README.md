@@ -15,6 +15,3 @@ npm install
 npm start
 ```
 -Abrir el navegador e ingresar la url: localhost:3000
-
-
-***Atencion: El proyecto se encuentra en etapa de desarrollo***
