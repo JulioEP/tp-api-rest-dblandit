@@ -9,7 +9,7 @@ const CursoSchema = new mongoose.Schema({
     tema: { type:String, trim:true },
     alumnos: {type:[Alumno], default: []}
 },{
-    versionKey: false // You should be aware of the outcome after set to false
+    versionKey: false
 });
 
 module.exports = mongoose.model('Curso', CursoSchema);

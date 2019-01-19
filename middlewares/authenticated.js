@@ -1,5 +1,9 @@
 'user strict'
 
+/**
+ * NO IMPLEMENTADO TODAVIA
+ */
+
 var jwt = require('jwt-simple');
 var moment = require('moment');
 var secret = 'clave_secreta_';

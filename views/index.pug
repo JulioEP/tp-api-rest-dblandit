@@ -2,20 +2,21 @@ extends layout
 
 block content
   h1= title
-
+  h3 Secret: dblandit
+  p Para crear y eliminar cursos es necesario enviar el token generado por https://jwt.io/
   h3 Crear Curso
-  p -POST localhost:3000/cursos  (pasar documento JSON en el body)
+  p -POST localhost:3000/api/cursos  (pasar documento JSON en el body)
   h3 Eliminar curso
-  p -DELETE localhost:3000/cursos/:id
+  p -DELETE localhost:3000/api/cursos/:id
   h3 Listar cursos
-  p -GET localhost:3000/cursos
-  p -GET localhost:3000/cursos?duracionHorasTotal=40
-  p -GET localhost:3000/cursos?anioDictado=2019
-  p -GET localhost:3000/cursos?anioDictado=2019&duracionHorasTotal=40
+  p -GET localhost:3000/api/cursos
+  p -GET localhost:3000/api/cursos?duracionHorasTotal=40
+  p -GET localhost:3000/api/cursos?anioDictado=2019
+  p -GET localhost:3000/api/cursos?anioDictado=2019&duracionHorasTotal=40
   h3 Obtener alumnos de un curso
-  p -GET localhost:3000/cursos/:id/alumnos
+  p -GET localhost:3000/api/cursos/:id/alumnos
   h3 Obtener alumno con mejor nota de un curso
-  p -GET localhost:3000/cursos/:id/alumnos?mejor=true
+  p -GET localhost:3000/api/cursos/:id/alumnos?mejor=true
 
   h4 JSON de ejemplo
-  p {"anioDictado":2019, "duracionHorasTotal":40, "tema":"big data", "alumnos":[{"nombre":"Julio", "apellido":"Peralta", "dni":12345678, "direccion":"mi casa", "nota":8},{"nombre":"Juan", "apellido":"Funes", "dni":12345668, "direccion":"casa juan", "nota":7},{"nombre":"pepe", "apellido":"olmo", "dni":12545678, "direccion":"casapepe", "nota":10},{"nombre":"Maria", "apellido":"Luisa", "dni":12345679, "direccion":"casamaria", "nota":5}]}
+  p  {"anioDictado":2019, "duracionHorasTotal":40, "tema":"big data", "alumnos":[{"nombre":"Julio", "apellido":"peralta", "dni":12345678, "direccion":"mi casa", "nota":8}, {"nombre":"Juan", "apellido":"Funes", "dni":3215645, "direccion":"casaFunes", "nota":5},{"nombre":"Camila", "apellido":"Martinez", "dni":35654789, "direccion":"casaMartinez", "nota":9}]}

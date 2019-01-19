@@ -9,7 +9,6 @@ var app = require('../app');
 var debug = require('debug')('tp-api-rest:server');
 var http = require('http');
 
-console.log("WWW")
 /**
  * Get port from environment and store in Express.
  */

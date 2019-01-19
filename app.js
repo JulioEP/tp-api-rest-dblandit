@@ -25,9 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Carga de rutas
 app.use('/', indexRouter);
-app.use('/cursos', cursosRouter);
-
-console.log("APP.JS")
+app.use('/api/cursos', cursosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
